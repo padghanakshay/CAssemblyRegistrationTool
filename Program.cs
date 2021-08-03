@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -127,15 +127,23 @@ namespace CAssemblyRegistrationTool
 
         static void Main(string[] args)
         {
+            string strExeFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string thisExeName = Path.GetFileName(strExeFilePath);
+
             string totalPath = "";
             foreach (String arg in Environment.GetCommandLineArgs())
             {
+                string commandExeName = Path.GetFileName(arg);
+                if (thisExeName == commandExeName)
+                    continue;
+
                 totalPath = arg;
             }  
             
             // Used from command values
             if (totalPath != null && totalPath.Length > 0)
             {
+                Console.WriteLine("Filepath: \n" + totalPath);
             }
             else
             {
