@@ -7,6 +7,7 @@ This software use to register C# Class same as regasm.exe
 start "" "CAssemblyRegistrationTool EXE file full Path" "Assembly file to register full path"
 
 Example
+
 start "" "D:\Output\x64\Debug\CAssemblyRegistrationTool.exe" "D:Output\x64\Debug\SomethingToRegister.dll"
 
 ===========================================================================
