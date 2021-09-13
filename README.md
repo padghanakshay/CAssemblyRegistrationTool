@@ -1,12 +1,24 @@
 # CAssemblyRegistrationTool
 This software use to register C# Class same as regasm.exe
 
-If you want to use this using cpp use follwing code.
+===========================================================================
+
+# If you want to register assembly using Bat File use following lines
+start "" "CAssemblyRegistrationTool EXE file full Path" "Assembly file to register full path"
+
+Example
+start "" "D:\Output\x64\Debug\CAssemblyRegistrationTool.exe" "D:Output\x64\Debug\SomethingToRegister.dll"
+
+===========================================================================
+
+# If you want to use this using cpp use follwing code.
 
 //-----------------------------------------------------------------------------
+
 void OpenExe(LPCTSTR lpApplicationName, const std::wstring& command)
 {
     // additional information
+    
     STARTUPINFO si;     
     PROCESS_INFORMATION pi;
 
